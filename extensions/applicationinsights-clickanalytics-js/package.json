@@ -2,6 +2,8 @@
     "name": "@microsoft/applicationinsights-clickanalytics-js",
     "version": "2.5.11",
     "description": "Microsoft Application Insights Click Analytics extension",
+    "homepage": "https://github.com/microsoft/ApplicationInsights-JS#readme",
+    "author": "Microsoft Application Insights Team",
     "main": "dist/applicationinsights-clickanalytics-js.js",
     "module": "dist-esm/applicationinsights-clickanalytics-js.js",
     "types": "types/applicationinsights-clickanalytics-js.d.ts",
@@ -12,7 +14,7 @@
         "build:browser": "rollup -c",
         "test": "grunt clickanalyticstests",
         "lint": "tslint -p tsconfig.json",
-        "dtsgen": "api-extractor run --local && powershell -ExecutionPolicy Bypass ../../scripts/dtsgen.ps1 'Microsoft.ApplicationInsights'"
+        "dtsgen": "api-extractor run --local && node ../../scripts/dtsgen.js 'Microsoft.ApplicationInsights'"
     },
     "devDependencies": {
         "@microsoft/applicationinsights-rollup-plugin-uglify3-js": "1.0.0",
